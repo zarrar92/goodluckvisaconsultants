@@ -40,7 +40,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 0; /* Remove any gap below header */
+            margin-bottom: 0;
         }
         header::after {
             content: '';
@@ -126,7 +126,7 @@
 
         /* Main Content */
         main {
-            flex: 1 0 auto; /* Ensures main content pushes footer to the bottom */
+            flex: 1 0 auto;
         }
         section {
             padding: 60px 20px;
@@ -271,8 +271,8 @@
             padding: 40px 20px;
             text-align: center;
             box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
-            flex-shrink: 0; /* Prevents footer from shrinking */
-            margin-top: auto; /* Pushes footer to bottom */
+            flex-shrink: 0;
+            margin-top: auto;
         }
         footer .footer-content {
             display: flex;
@@ -320,7 +320,7 @@
 <body>
     <header>
         <div class="header-content">
-            <img src="https://via.placeholder.com/180?text=Logo" alt="Good Luck Visa Consultants Logo" class="logo">
+            <img src="https://via.placeholder.com/180" alt="Good Luck Visa Consultants Logo" class="logo"> <!-- Removed ?text=Logo -->
             <h1>Good Luck Visa Consultants</h1>
             <p>Your Trusted Partner for Tourist and Student Visa Solutions</p>
             <div class="header-cta">
