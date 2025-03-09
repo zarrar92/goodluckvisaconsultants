@@ -1,0 +1,485 @@
+Below is an updated version of the HTML code for "Good Luck Visa Consultants" with improvements to the header and the addition of WhatsApp logos alongside phone numbers throughout the site. I’ve used Font Awesome for the WhatsApp icons, enhanced the header with a more dynamic design, and ensured consistency.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Luck Visa Consultants</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333333;
+            background-color: #F5F5F5;
+            line-height: 1.6;
+        }
+
+        /* Enhanced Header */
+        header {
+            background: linear-gradient(135deg, #2E7D32 0%, #F9A825 70%), url('https://via.placeholder.com/1200x600?text=Visa+Success+Starts+Here'); /* Editable image */
+            background-size: cover;
+            background-position: center;
+            color: #F5F5F5;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        header .header-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header .logo {
+            max-width: 180px; /* Editable logo size */
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4em;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
+        }
+        header p {
+            font-size: 1.5em;
+            font-weight: 600;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        header .header-cta {
+            margin-top: 30px;
+        }
+        header .header-cta a {
+            color: #F5F5F5;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        header .header-cta a:hover {
+            color: #F9A825;
+        }
+        header .header-cta i {
+            margin-right: 8px;
+            color: #25D366; /* WhatsApp green */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #F9A825;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: #333333;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #2E7D32;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2E7D32;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h3 {
+            color: #F9A825;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8em;
+            margin: 20px 0;
+        }
+        p, li {
+            font-size: 1.1em;
+        }
+        .whatsapp-link i {
+            color: #25D366; /* WhatsApp green */
+            margin-right: 8px;
+        }
+
+        /* Call to Action */
+        .cta {
+            background-color: #F9A825;
+            padding: 25px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .cta:hover {
+            transform: translateY(-5px);
+        }
+        .cta a {
+            color: #333333;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .services-grid div {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .services-grid div:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Steps */
+        .steps {
+            margin-top: 20px;
+            list-style: none;
+            counter-reset: step;
+        }
+        .steps li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .steps li:before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            background-color: #2E7D32;
+            color: #F5F5F5;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+        }
+
+        /* Why Choose Us */
+        #why-choose-us ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+        #why-choose-us li {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 5px solid #F9A825;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea, button {
+            padding: 12px;
+            font-family: 'Open Sans', sans-serif;
+            border: 2px solid #2E7D32;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #2E7D32;
+            color: #F5F5F5;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #F9A825;
+            color: #333333;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #2E7D32 0%, #1B4D20 100%);
+            color: #F5F5F5;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+        }
+        footer .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto 20px;
+        }
+        footer .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        footer h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: #F9A825;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        footer a {
+            color: #F5F5F5;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #F9A825;
+        }
+        footer .social-icons a {
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header { padding: 60px 15px; min-height: 300px; }
+            header h1 { font-size: 2.5em; }
+            header p { font-size: 1.2em; }
+            nav ul { flex-direction: column; gap: 15px; }
+            .services-grid { grid-template-columns: 1fr; }
+            section { padding: 40px 15px; }
+            footer .footer-content { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Enhanced Header -->
+    <header>
+        <div class="header-content">
+            <img src="https://via.placeholder.com/180?text=Logo" alt="Good Luck Visa Consultants Logo" class="logo"> <!-- Replace with your logo -->
+            <h1>Good Luck Visa Consultants</h1>
+            <p>Your Trusted Partner for Tourist and Student Visa Solutions</p>
+            <div class="header-cta">
+                <a href="https://wa.me/27679110565" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 67 911 0565</a>
+                <a href="https://wa.me/27681634595" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 68 163 4595</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#why-choose-us">Why Choose Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <section id="home">
+        <h2>Unlock Your Journey</h2>
+        <p>At Good Luck Visa Consultants, we believe that every journey begins with a single step – and we’re here to make that step seamless. Whether you’re dreaming of exploring new horizons as a tourist or pursuing world-class education as an international student, our expert team is dedicated to guiding you through the visa application process with ease and confidence.</p>
+        <div class="cta">
+            <p>Contact us today:</p>
+            <p><a href="https://wa.me/27679110565" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 67 911 0565</a> | <a href="https://wa.me/27681634595" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 68 163 4595</a></p>
+            <p>✉️ Email: <a href="mailto:goodluckvisaconsultants@gmail.com">goodluckvisaconsultants@gmail.com</a></p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Who We Are</h2>
+        <p>Good Luck Visa Consultants is a premier visa consultancy service committed to helping individuals achieve their travel and educational goals. Based in South Africa, we specialize in tourist and student visa applications, offering tailored advice and end-to-end assistance.</p>
+    </section>
+
+    <section id="services">
+        <h2>Comprehensive Visa Solutions</h2>
+        <h3>Expert Assistance for Tourist and Student Visas</h3>
+        <div class="services-grid">
+            <div>
+                <h3>Tourist Visa Services</h3>
+                <p><strong>Overview:</strong> Planning a holiday or short-term adventure? We provide full support for tourist visa applications worldwide.</p>
+                <p><strong>What We Offer:</strong></p>
+                <ul>
+                    <li>Eligibility assessments</li>
+                    <li>Document preparation</li>
+                    <li>Application submission</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Student Visa Services</h3>
+                <p><strong>Overview:</strong> Ready to study abroad? We assist with student visa applications for universities globally.</p>
+                <p><strong>What We Offer:</strong></p>
+                <ul>
+                    <li>University admission guidance</li>
+                    <li>Visa eligibility checks</li>
+                    <li>Pre-departure support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <h2>Your Visa, Step by Step</h2>
+        <ol class="steps">
+            <li><strong>Consultation:</strong> Schedule a call or message us.</li>
+            <li><strong>Documentation:</strong> We guide you through preparation.</li>
+            <li><strong>Application:</strong> We ensure correct submission.</li>
+            <li><strong>Follow-Up:</strong> We track your application.</li>
+            <li><strong>Success:</strong> Receive your visa!</li>
+        </ol>
+    </section>
+
+    <section id="why-choose-us">
+        <h2>Your Success Is Our Priority</h2>
+        <ul>
+            <li><strong>Expertise:</strong> Years of experience in visa consultancy.</li>
+            <li><strong>Personalized Service:</strong> Tailored support for you.</li>
+            <li><strong>Reliability:</strong> Trusted by clients.</li>
+            <li><strong>Affordability:</strong> No hidden fees.</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Ready to Begin? Let’s Connect!</h2>
+        <p>Reach out today to start your visa application process.</p>
+        <p><a href="https://wa.me/27679110565" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 67 911 0565</a> | <a href="https://wa.me/27681634595" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 68 163 4595</a></p>
+        <p>✉️ Email: <a href="mailto:goodluckvisaconsultants@gmail.com">goodluckvisaconsultants@gmail.com</a></p>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="">Select Visa Type</option>
+                <option value="tourist">Tourist Visa</option>
+                <option value="student">Student Visa</option>
+            </select>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><a href="https://wa.me/27679110565" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 67 911 0565</a></p>
+                <p><a href="https://wa.me/27681634595" class="whatsapp-link"><i class="fab fa-whatsapp"></i>+27 68 163 4595</a></p>
+                <p>✉️ <a href="mailto:goodluckvisaconsultants@gmail.com">goodluckvisaconsultants@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="#home">Home</a></p>
+                <p><a href="#services">Services</a></p>
+                <p><a href="#contact">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/27679110565" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:goodluckvisaconsultants@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>© 2025 Good Luck Visa Consultants | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+```
+
+### Key Improvements
+#### Header Enhancements
+- **Design:** 
+  - Increased height (`min-height: 400px`) and padding for a grander appearance.
+  - Adjusted the gradient to stop at 70% for a smoother transition with the background image.
+  - Added a darker overlay (`rgba(0, 0, 0, 0.4)`) for better text readability.
+  - Centered content vertically and horizontally using flexbox.
+- **Logo:** 
+  - Enlarged to 180px with a subtle shadow and rounded corners for a polished look.
+- **Text:** 
+  - Increased `h1` size to 4em with a stronger text shadow.
+  - Added a fade-in animation (`@keyframes fadeIn`) for a dynamic entrance.
+- **WhatsApp Integration:** 
+  - Added WhatsApp icons (`<i class="fab fa-whatsapp"></i>`) with the official WhatsApp green color (`#25D366`) next to phone numbers in a dedicated `.header-cta` section.
+
+#### WhatsApp Logos
+- **Implementation:** 
+  - Included Font Awesome via CDN (`<link>` in `<head>`).
+  - Added WhatsApp icons with phone numbers in the header, home section, contact section, and footer using the `<i class="fab fa-whatsapp"></i>` tag.
+  - Styled with `.whatsapp-link` class for consistency (green icon, spacing).
+- **Consistency:** Links are clickable (`https://wa.me/`) and paired with icons site-wide.
+
+#### Editability
+- The header background image and logo are still placeholders—replace them with your own:
+  - Header image: Update `url('https://via.placeholder.com/1200x600?text=Visa+Success+Starts+Here')` with a real image URL or local file path.
+  - Logo: Replace `https://via.placeholder.com/180?text=Logo` with your logo file (e.g., `src="path/to/your-logo.png"`).
+
+### How to Use
+1. **Save and Test:** Copy this into `index.html` and open in a browser.
+2. **Replace Assets:**
+   - Header image: Use a high-resolution travel or education-themed photo.
+   - Logo: Upload your company logo and update the `<img src>`.
+3. **Customize:** Adjust colors (e.g., `#2E7D32`, `#F9A825`) or font sizes in the `<style>` section as needed.
+4. **Form:** Add backend functionality (e.g., PHP or Formspree) for the contact form.
+
+This version offers a more striking header and seamless WhatsApp integration. Let me know if you’d like further refinements!
